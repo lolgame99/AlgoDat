@@ -1,12 +1,13 @@
 package sortingAlgos;
 
-public class bubbleSort {
+public class insertionSort {
     public static int[] sort(int[] unsorted) {
-        for (int i = 1; i < unsorted.length; i++) {
-            for (int j = 0; j< unsorted.length-1; j++) {
-                if(unsorted[j]>unsorted[j+1]){
-                    swap(unsorted,j,j+1);
-                }
+        for (int i = 0; i < unsorted.length; i++) {
+            int j = i;
+
+            while(j>0&&unsorted[j-1]>unsorted[j]){
+                swap(unsorted,j,j-1);
+                j--;
             }
         }
 

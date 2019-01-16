@@ -1,3 +1,5 @@
+package util;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -28,7 +30,7 @@ public class DataGenerator {
     public static void printArray ( int[] arr){
         for (int num: arr
              ) {
-            System.out.println(num);
+            System.out.print(num + " ");
         }
     }
 
