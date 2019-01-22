@@ -3,22 +3,23 @@ package sortingAlgos;
 public class selectionSort{
 
     public static int[] sort(int[] unsorted) {
-        for (int j = 0; j < unsorted.length-1; j++) {
+        int[] arr = unsorted;
+        for (int j = 0; j < arr.length-1; j++) {
             int min = j;
 
-            for (int i = j+1; i < unsorted.length; i++) {
-                if(unsorted[i]<unsorted[min]){
+            for (int i = j+1; i < arr.length; i++) {
+                if(arr[i]<arr[min]){
                     min = i;
                 }
                 
             }
 
             if(min!=j){
-                swap(unsorted,j,min);
+                swap(arr,j,min);
             }
         }
         
-        return unsorted;
+        return arr;
     }
 
     private static final void swap (int[] a, int i, int j) {
